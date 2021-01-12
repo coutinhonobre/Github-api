@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -42,4 +44,26 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit"
+    implementation 'com.squareup.okhttp3:okhttp:4.8.0'
+    testImplementation 'com.squareup.okhttp3:mockwebserver:4.3.1'
+
+
+    // Para ViewModel
+    implementation "androidx.lifecycle:lifecycle-extensions:$viewmodel"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$viewmodel"
+
+    // Coins
+    implementation "org.koin:koin-android:$coins"
+    implementation "org.koin:koin-androidx-viewmodel:$coins"
+    implementation "org.koin:koin-androidx-scope:$coins"
+
+    // SwipeRefreshLayout
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$swipe"
+
+    //carregar imagem
+    implementation("io.coil-kt:coil:$coil")
 }
