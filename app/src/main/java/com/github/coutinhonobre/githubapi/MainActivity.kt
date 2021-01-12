@@ -19,6 +19,10 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(applicationContext, it.status.toString(), Toast.LENGTH_LONG).show()
         })
 
+        viewModel.data.observe(this, Observer {
+            Toast.makeText(applicationContext, it.repositories.get(it.repositories.size-1).fullName.toString(), Toast.LENGTH_LONG).show()
+        })
+
 
 
     }
