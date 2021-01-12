@@ -1,10 +1,11 @@
-package com.github.coutinhonobre.githubapi
+package com.github.coutinhonobre.githubapi.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.Observer
-import com.github.coutinhonobre.githubapi.presentation.RepositoryViewModel
+import com.github.coutinhonobre.githubapi.R
+import com.github.coutinhonobre.githubapi.presentation.viewmodel.RepositoryViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {

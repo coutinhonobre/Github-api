@@ -1,7 +1,7 @@
 package com.github.coutinhonobre.githubapi.dependency
 
 import com.github.coutinhonobre.githubapi.api.GeneralApi
-import com.github.coutinhonobre.githubapi.presentation.RepositoryViewModel
+import com.github.coutinhonobre.githubapi.presentation.viewmodel.RepositoryViewModel
 import com.github.coutinhonobre.githubapi.repository.ItemRepository
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
@@ -57,5 +57,5 @@ val retrofitModule = module {
     single { provideRetrofit(get(), get()) }
 }
 
-const val token = "token 5e2b39dbc1f636506f8e6f7f3413b6c512b520be";
+const val token = "token c0df7b6c0a7f5584183c5c4e7b74c22c2c5fdb95";
 const val accept = "application/vnd.github.v3+json";
