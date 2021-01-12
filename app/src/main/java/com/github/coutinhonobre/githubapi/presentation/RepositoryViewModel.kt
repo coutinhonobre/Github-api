@@ -22,12 +22,17 @@ class RepositoryViewModel(private val repository: ItemRepository): ViewModel() {
         get() = _data
 
     init {
-        fetchData()
+        fetchRepository()
     }
 
-    private fun fetchData() {
+    private fun fetchRepositorySearchName(query: String = DEFAULT_QUERY) {
+        fetchRepository(query)
+    }
+
+
+    private fun fetchRepository(query: String = DEFAULT_QUERY) {
         _loadingState.postValue(LoadingState.LOADING)
-        repository.getRepositories().enqueue(object : Callback<Item>{
+        repository.getRepositories(query).enqueue(object : Callback<Item>{
             override fun onResponse(call: Call<Item>, response: Response<Item>) {
                 if (response.isSuccessful){
                     _data.postValue(response.body())
@@ -41,6 +46,10 @@ class RepositoryViewModel(private val repository: ItemRepository): ViewModel() {
             }
 
         })
+    }
+
+    companion object {
+        const val DEFAULT_QUERY = "Android";
     }
 
 }

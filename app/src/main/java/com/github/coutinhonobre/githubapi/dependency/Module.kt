@@ -57,5 +57,5 @@ val retrofitModule = module {
     single { provideRetrofit(get(), get()) }
 }
 
-const val token = "token 32d938ee0e14f8ac320110ea3aff1922958c31d7";
+const val token = "token 3cba734a3fbc055910ef1765340db9cd2c522f89";
 const val accept = "application/vnd.github.v3+json";
