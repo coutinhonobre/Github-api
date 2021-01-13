@@ -5,8 +5,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import coil.api.load
+import coil.transform.CircleCropTransformation
 import com.github.coutinhonobre.githubapi.R
 import com.github.coutinhonobre.githubapi.model.Repository
+import kotlinx.android.synthetic.main.activity_detail.*
 
 class DetailActivity : AppCompatActivity() {
     private lateinit var repository: Repository
@@ -16,7 +19,18 @@ class DetailActivity : AppCompatActivity() {
 
         repository = intent.getParcelableExtra(REPOSITORY)!!
 
-        Toast.makeText(applicationContext, repository.fullName, Toast.LENGTH_LONG).show()
+        setView()
+    }
+
+    private fun setView() {
+        detail_imageView.load(repository.owner?.avatarUrl){
+            crossfade(true)
+            placeholder(R.drawable.ic_launcher_background)
+            transformations(CircleCropTransformation())
+        }
+        detail_textView_username.text = repository.owner?.login
+        detail_textView_repository.text = repository.fullName
+        detail_textView_description.text = repository.description
     }
 
     companion object {

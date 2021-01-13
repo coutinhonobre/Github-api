@@ -3,4 +3,5 @@
     <dimen name="fontHeader">16sp</dimen>
     <dimen name="spacing">16dp</dimen>
     <dimen name="spacingSmall">8dp</dimen>
+    <dimen name="spacingMicro">4dp</dimen>
 </resources>
