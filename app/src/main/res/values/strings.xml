@@ -3,4 +3,7 @@
     <string name="nameRepository">Name repository</string>
     <string name="username">Username</string>
     <string name="forks">forks</string>
+    <string name="search">Pesquisa</string>
+    <string name="details">Detalhes</string>
+    <string name="home">Home</string>
 </resources>

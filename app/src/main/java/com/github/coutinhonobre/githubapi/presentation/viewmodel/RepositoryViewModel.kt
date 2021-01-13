@@ -25,7 +25,11 @@ class RepositoryViewModel(private val repository: ItemRepository): ViewModel() {
         fetchRepository()
     }
 
-    private fun fetchRepositorySearchName(query: String = DEFAULT_QUERY) {
+    fun restart() {
+        fetchRepository()
+    }
+
+    fun fetchRepositorySearchName(query: String = DEFAULT_QUERY) {
         fetchRepository(query)
     }
 
