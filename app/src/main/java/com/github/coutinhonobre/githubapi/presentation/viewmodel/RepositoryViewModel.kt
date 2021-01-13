@@ -10,7 +10,6 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-
 class RepositoryViewModel(private val repository: ItemRepository): ViewModel() {
 
     private val _loadingState = MutableLiveData<LoadingState>()
@@ -32,7 +31,6 @@ class RepositoryViewModel(private val repository: ItemRepository): ViewModel() {
     fun fetchRepositorySearchName(query: String = DEFAULT_QUERY) {
         fetchRepository(query)
     }
-
 
     private fun fetchRepository(query: String = DEFAULT_QUERY) {
         _loadingState.postValue(LoadingState.LOADING)

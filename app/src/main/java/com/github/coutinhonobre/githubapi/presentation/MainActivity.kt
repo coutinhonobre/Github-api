@@ -68,7 +68,6 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
                     )
                 }
                 this@MainActivity.startActivity(intent)
-                startActivity(intent)
             }
         }
 

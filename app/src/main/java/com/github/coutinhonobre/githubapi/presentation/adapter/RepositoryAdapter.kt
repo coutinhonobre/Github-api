@@ -17,10 +17,13 @@ class RepositoryAdapter(
         private val onItemClickListener: ((repository: Repository) -> Unit)
     ) : RecyclerView.ViewHolder(view) {
         fun bindView(repository: Repository) {
+            setView(repository)
+        }
+
+        private fun setView(repository: Repository) {
             itemView.item_textView_nameRepository.text = repository.name
             itemView.item_textView_username.text = repository.owner?.login
             itemView.item_textView_forks.text = repository.forkCount.toString()
-
             itemView.setOnClickListener { onItemClickListener.invoke(repository) }
         }
     }
